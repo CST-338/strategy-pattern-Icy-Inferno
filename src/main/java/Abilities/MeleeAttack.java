@@ -1,5 +1,9 @@
+package Abilities;
+
+import Monsters.Monster;
+
 /**
- * This is a POJO that represents a monster's Melee Attack.
+ * This is a POJO that represents a monster's Melee Abilities.Attack.
  *
  * @author Alan Becker
  * @version 1.0, 07/20/24

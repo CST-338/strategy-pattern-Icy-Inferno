@@ -1,5 +1,7 @@
+package Abilities;
+
 /**
- * This is a tagging interface that represents a monster's Ability.
+ * This is a tagging interface that represents a monster's Abilities.Ability.
  *
  * @author Alan Becker
  * @version 1.0, 07/20/24

@@ -1,7 +1,10 @@
+package Monsters;
+
+import Abilities.MeleeAttack;
 import java.util.HashMap;
 
 /**
- * This is a POJO that represents an Imp.
+ * This is a POJO that represents an Monsters.Imp.
  *
  * @author Alan Becker
  * @version 1.0, 07/20/24
@@ -29,6 +32,6 @@ public class Imp extends Monster {
 
   @Override
   public String toString() {
-    return "Monsters.Imp has : " + super.toString();
+    return this.getClass().getName() + " has : " + super.toString();
   }
 }

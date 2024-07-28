@@ -1,9 +1,12 @@
+package Monsters;
+
+import Abilities.Attack;
 import java.util.HashMap;
 import java.util.Objects;
 import java.util.Random;
 
 /**
- * This is a POJO that represents a Monster.
+ * This is a POJO that represents a Monsters.Monster.
  *
  * @author Alan Becker
  * @version 1.0, 07/20/24
@@ -97,7 +100,7 @@ public abstract class Monster {
     return this.getHp() > 0;
   }
 
-  Integer attackTarget(Monster target) {
+  public Integer attackTarget(Monster target) {
     Integer damage = attack.attack(target);
     target.takeDamage(damage);
     return damage;

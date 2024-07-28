@@ -1,7 +1,10 @@
+package Monsters;
+
+import Abilities.RangedAttack;
 import java.util.HashMap;
 
 /**
- * This is a POJO that represents a Kobold.
+ * This is a POJO that represents a Monsters.Kobold.
  *
  * @author Alan Becker
  * @version 1.0, 07/20/24
@@ -28,6 +31,6 @@ public class Kobold extends Monster {
 
   @Override
   public String toString() {
-    return "Monsters.Kobold has : " + super.toString();
+    return this.getClass().getName() + " has : " + super.toString();
   }
 }

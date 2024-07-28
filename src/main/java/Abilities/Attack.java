@@ -1,5 +1,9 @@
+package Abilities;
+
+import Monsters.Monster;
+
 /**
- * This is an interface that represents a monster's Attack.
+ * This is an interface that represents a monster's Abilities.Attack.
  *
  * @author Alan Becker
  * @version 1.0, 07/20/24
