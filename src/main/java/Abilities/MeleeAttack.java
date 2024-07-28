@@ -1,5 +1,9 @@
+package Abilities;
+
+import Monsters.Monster;
+
 /**
- * This is a POJO that represents a monster's Melee Attack.
+ * This is a POJO that represents a monster's Melee Abilities.Attack.
  *
  * @author Alan Becker
  * @version 1.0, 07/20/24
@@ -11,7 +15,7 @@ public class MeleeAttack implements Attack {
 
   Monster attacker;
 
-  MeleeAttack(Monster attacker) {
+  public MeleeAttack(Monster attacker) {
     this.attacker = attacker;
   }
 
@@ -19,6 +23,6 @@ public class MeleeAttack implements Attack {
   public Integer attack(Monster target) {
     String message = attacker + " uses a melee attack on " + target;
     System.out.println(message);
-    return null;
+    return attacker.getStrength() - target.getDefense();
   }
 }

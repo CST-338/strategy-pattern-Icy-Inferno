@@ -1,5 +1,9 @@
+package Abilities;
+
+import Monsters.Monster;
+
 /**
- * This is a POJO that represents a monster's Ranged Attack.
+ * This is a POJO that represents a monster's Ranged Abilities.Attack.
  *
  * @author Alan Becker
  * @version 1.0, 07/20/24
@@ -19,6 +23,6 @@ public class RangedAttack implements Attack {
   public Integer attack(Monster target) {
     String message = attacker + " uses a ranged attack on " + target;
     System.out.println(message);
-    return null;
+    return attacker.getAgility() - target.getAgility();
   }
 }
