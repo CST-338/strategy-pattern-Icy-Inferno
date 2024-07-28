@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Objects;
+import java.util.Random;
 
 /**
  * This is a POJO that represents a Monster.
@@ -16,6 +17,10 @@ public abstract class Monster {
   private Integer xp = 10;
   private Integer maxHP;
   private HashMap<String, Integer> items;
+  Integer agility = 10;
+  Integer defense = 10;
+  Integer strength = 10;
+  Attack attack;
 
   public Monster(Integer maxHP, Integer xp, HashMap<String, Integer> items) {
     this.maxHP = maxHP;
@@ -54,6 +59,48 @@ public abstract class Monster {
 
   public void setItems(HashMap<String, Integer> items) {
     this.items = items;
+  }
+
+  public Integer getAgility() {
+    return agility;
+  }
+
+  public Integer getDefense() {
+    return defense;
+  }
+
+  public Integer getStrength() {
+    return strength;
+  }
+
+  Integer getAttribute (Integer min, Integer max) {
+    Random rand = new Random();
+    if (min > max) {
+      Integer temp = min;
+      min = max;
+      max = temp;
+    }
+
+    //returns a random number between min and max inclusive
+    return rand.nextInt(max-min) + min;
+  }
+
+  boolean takeDamage(Integer damage) {
+    if (damage > 0) {
+      this.setHp(this.getHp() - damage);
+      System.out.println("The creature was hit for " + damage + " damage");
+      if (this.getHp() <= 0) {
+        System.out.println("Oh no! the creature has perished");
+      }
+    }
+    System.out.println(this.toString());
+    return this.getHp() > 0;
+  }
+
+  Integer attackTarget(Monster target) {
+    Integer damage = attack.attack(target);
+    target.takeDamage(damage);
+    return damage;
   }
 
   @Override
